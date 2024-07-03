@@ -1,0 +1,6 @@
+
+if ( /\/GetClasses$/i.test(window.location.href)==false){ 
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.refresh );
+        }
+ }

@@ -1,0 +1,26 @@
+Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+RewriteEngine On
+
+# For LocalHost !.php
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTP_HOST} !=127.0.0.1
+RewriteCond %{REMOTE_ADDR} !=127.0.0.1
+RewriteCond %{REMOTE_ADDR} !=::1
+ErrorDocument 404 /Admin/404.html
+## hide .php extension
+# To externally redirect /dir/foo.php to /dir/foo
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=302,L]
+
+# To internally forward /dir/foo to /dir/foo.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [L]
+
+    php_value date.timezone  'Africa/Cairo'
+    php_value session.cookie_lifetime "2592000"
+    php_value session.gc_maxlifetime "2592000"
+    php_value max_execution_time "300"
+    php_value memory_limit 1000M
+    php_value display_errors on
