@@ -501,6 +501,7 @@ function methods() {
   });
 }
 function Classes() {
+  $('#loader-contener').show();
   $.ajax({ 
     type      : 'GET', 
     url       : 'ClassesApi.php',
@@ -605,6 +606,7 @@ function Classes() {
         }
 
         $('#myGroup').append(Meeting)
+        $('#loader-contener').hide();
       }
 
 
@@ -633,7 +635,8 @@ function Send(Section,code,category,name,Duration,t_code,date,id,status) {
     document.getElementById('Aa'+Section).style.setProperty ("display" ,"none", "important");
     document.getElementById(Section).style.setProperty ("display" ,"none", "important");
     document.getElementById('Dd'+Section).style.setProperty ("display" ,"none", "important");  
-    document.getElementById('Cc'+Section).style.setProperty ("display" ,"flex", "important");  
+    document.getElementById('Cc'+Section).style.setProperty ("display" ,"flex", "important"); 
+    $('#loader-contener').show(); 
     $.ajax({ 
       type      : 'post', 
       url       : 'add-to-db.php', 
@@ -665,6 +668,7 @@ function Cancel(Section,Cancel,date) {
       document.getElementById('Aa'+Section).style.setProperty ("display" ,"none", "important");
       document.getElementById('Dd'+Section).style.setProperty ("display" ,"none", "important");
       document.getElementById('Cc'+Section).style.setProperty ("display" ,"flex", "important");
+      $('#loader-contener').show();
       $.ajax({ 
         type      : 'post', 
         url       : 'add-to-db.php', 

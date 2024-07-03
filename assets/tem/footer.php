@@ -108,17 +108,17 @@
     </div>
   </div>
   <script>
-    window.addEventListener('load', () => {
-      document.getElementById("loader-contener").style.setProperty("display", "none", "important");
-  });
-  $(document).click(function(event) {
-    $(event.target).hasClass("Request-btn") ? $(event.target).addClass('disabled') + $(event.target).html(`
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-    `) : false ;
-    
-});
+    $('#loader-contener').hide();
+    $('form').on("submit", function (e) {
+      $('#loader-contener').show();
+      console.log(e);
+    }); 
+    $('a').on('click', function (e) {
+      if ($(this).attr('href') != '' && $(this).attr('href') != '#' ) {
+        $('#loader-contener').show();
+        console.log(e);
+      }
+    });
   </script>
 <!-- ======= Footer ======= -->
   <!-- ======= Footer ======= -->
@@ -190,9 +190,10 @@
         // setInterval(ShowNotification, 90000);
       })
       function Seen(ID) {
-        $.ajax({ //Process the form using $.ajax()
-                type      : 'GET', //Method type
-                url       : 'Notification.php', //Your form processing file URL
+        $('#loader-contener').show();
+        $.ajax({ 
+                type      : 'GET',
+                url       : 'Notification.php', 
                 data      : {
                   ID : ID,
                   WhoSeen : '<?php echo $WhoSeen  ?>'
@@ -202,6 +203,7 @@
                   ShowNotification();
                 }
             });
+        $('#loader-contener').hide();
       }
 
 
@@ -317,7 +319,7 @@
         }
         
       }
-                    
+     
     </script>
   <!-- ---------- ShowNotification -------------- -->
   </body>

@@ -396,7 +396,7 @@ set_exception_handler("myException");
             setInterval(GetNewStudentsCount, 90000);
           })
           function GetNewStudentsCount() {
-          $.ajax({ 
+          $.ajax({
                   type      : 'POST', 
                   url       : 'functions/GetNewStudents.php', 
                   data      : {
@@ -484,5 +484,4 @@ set_exception_handler("myException");
       myInput.focus()
     })
   </script>
-  <?php include "connect.php"; 
-  ?>
+  <?php include "connect.php"; ?>

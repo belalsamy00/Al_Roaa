@@ -404,9 +404,9 @@ if (!empty($_SESSION['Emessage'])) { ?>
       })
 
       function GetTrail() {
-        $.ajax({ //Process the form using $.ajax()
-          type      : 'GET', //Method type
-          url       : 'functions/GetTrail.php', //Your form processing file URL
+        $.ajax({
+          type      : 'GET',
+          url       : 'functions/GetTrail.php',
           data      : {
           Who : '<?php echo $GETWho  ?>',
           GetTrail : 'GetTrail'
@@ -432,9 +432,9 @@ if (!empty($_SESSION['Emessage'])) { ?>
         });
       }
       function GetLastClasses() {
-        $.ajax({ //Process the form using $.ajax()
-          type      : 'GET', //Method type
-          url       : 'functions/CS-functions.php', //Your form processing file URL
+        $.ajax({
+          type      : 'GET',
+          url       : 'functions/CS-functions.php',
           data      : {
           Who : '<?php echo $GETWho  ?>',
           GetLastClasses : 'GetLastClasses'
@@ -460,9 +460,9 @@ if (!empty($_SESSION['Emessage'])) { ?>
         });
       }
       function GetExceedingOutDate() {
-        $.ajax({ //Process the form using $.ajax()
-          type      : 'GET', //Method type
-          url       : 'functions/CS-functions.php', //Your form processing file URL
+        $.ajax({
+          type      : 'GET',
+          url       : 'functions/CS-functions.php',
           data      : {
           Who : '<?php echo $GETWho  ?>',
           GetExceedingOutDate : 'GetExceedingOutDate'
@@ -488,9 +488,9 @@ if (!empty($_SESSION['Emessage'])) { ?>
         });
       }
       function GetRenewal() {
-        $.ajax({ //Process the form using $.ajax()
-          type      : 'GET', //Method type
-          url       : 'functions/CS-functions.php', //Your form processing file URL
+        $.ajax({
+          type      : 'GET', 
+          url       : 'functions/CS-functions.php',
           data      : {
           Who : '<?php echo $GETWho  ?>',
           GetRenewal : 'GetRenewal'
