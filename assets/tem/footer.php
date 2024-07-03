@@ -114,7 +114,7 @@
       console.log(e);
     }); 
     $('a').on('click', function (e) {
-      if ($(this).attr('href') != '' && $(this).attr('href') != '#' ) {
+      if ($(this).attr('href') != '' && $(this).attr('href') != '#' && !$(this).attr('data-bs-toggle') ) {
         $('#loader-contener').show();
         console.log(e);
       }
