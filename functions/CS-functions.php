@@ -184,6 +184,7 @@ function GetLastClasses($Who)
   
       $LastClasses[$key]['Code'] = $value['Code'];
       $LastClasses[$key]['Remained'] = $value['Remained'] ;
+      $LastClasses[$key]['Last_class'] = $value['Last_class'] ;
       $LastClasses[$key]['Renewal_date'] = date('Y-m-d', strtotime($value['Renewal_date'])) ;
     
   }

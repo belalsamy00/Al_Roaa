@@ -78,6 +78,7 @@ if (isset($_SESSION['Who']) AND in_array($_SESSION['Who'],array('AbdelRahman','B
                   <tr>
                     <th   class="fw-bold fs-5 text-start text-nowrap" >كود الطالب</th>
                     <th    class="fw-bold fs-5 text-center text-nowrap" > حصص متبقية </th>
+                    <th   class="fw-bold fs-5 text-center text-nowrap" > تاريخ اخر حصة </th>
                     <th   class="fw-bold fs-5 text-center text-nowrap" > تاريخ التجديد </th>
                   </tr>
                 </thead>
@@ -93,6 +94,7 @@ if (isset($_SESSION['Who']) AND in_array($_SESSION['Who'],array('AbdelRahman','B
                     <tr onclick="window.location='<?php echo 'search?Code='.$StudentCodeExplode?>';" role="button">
                       <td class="fw-bold fs-5 text- text-start text-nowrap"> <?php echo $value['Code'] ?> </td>
                       <td class="fw-bold fs-5 text-center text-nowrap"> <?php echo $value['Remained'] ?> </td>
+                      <td class="fw-bold fs-5 text-center text-nowrap"> <?php echo $value['Last_class'] ?> </td>
                       <td class="fw-bold fs-5 text-center text-nowrap"> <?php echo $value['Renewal_date'] ?> </td>
                     </tr>
                     <?php }?>
