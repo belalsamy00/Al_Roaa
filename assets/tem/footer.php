@@ -109,7 +109,7 @@
   </div>
   <script>
     $('#loader-contener').hide();
-    $('form').on("submit", function (e) {
+    $('form').not('#UpdateClass').on("submit", function (e) {
       $('#loader-contener').show();
       console.log(e);
     }); 

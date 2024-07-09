@@ -160,7 +160,7 @@ if (isset($_GET['do'])) {$do = $_GET['do'];} else {$do = '0';} ?>
                             $c_count = $c_stmt->rowCount();
                             $max = $N_Students['Days']-$N_class['SUM(Days)'];
                             ?>
-                            <form name="myForm" novalidate   class="forms-sample needs-validation" action="" method="post"  enctype="multipart/form-data">
+                            <form name="myForm" id="UpdateClass" novalidate   class="forms-sample needs-validation" action="" method="post"  enctype="multipart/form-data">
                                 <div class="form-group  ">
 
                                     <div class="form-group row ">

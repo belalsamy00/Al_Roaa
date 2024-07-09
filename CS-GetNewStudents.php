@@ -131,7 +131,7 @@ if (isset($_SESSION['Who']) AND in_array($_SESSION['Who'],array('AbdelRahman','B
                         <td class="fw-bold fs-5 text-start text-nowrap"> ${Timestamp} </td>
                         <td class="fw-bold fs-5 text-start text-nowrap"> ${Name} </td>
                         <td class="fw-bold fs-5 text-start text-nowrap"> ${Sex} </td>
-                        <td class="fw-bold fs-5 text-start text-nowrap"> ${Phone} </td>
+                        <td class="fw-bold fs-5 text-start text-nowrap"> <a target="_blank" href="http://Wa.me/${Phone}">${Phone}</a> </td>
                         <td class="fw-bold fs-5 text-start text-nowrap"> ${Email} </td>
                         <td class="fw-bold fs-5 text-start text-nowrap"> ${Country} </td>
                         ${Statusinput}
